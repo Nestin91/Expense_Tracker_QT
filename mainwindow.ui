@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>371</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ===== MAIN WINDOW ===== */
+QMainWindow {
+    background-color: #f2f2f2;   /* Light grey */
+}
+
+/* ===== LABELS ===== */
+QLabel {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ===== LINE EDIT ===== */
+QLineEdit {
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #bfbfbf;
+}
+
+/* ===== DATE EDIT ===== */
+QDateEdit {
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #bfbfbf;
+}
+
+/* ===== COMBOBOX ===== */
+QComboBox {
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #bfbfbf;
+}
+
+/* Dropdown list */
+QComboBox QAbstractItemView {
+    background-color: white;
+    selection-background-color: #4da3ff;
+    selection-color: white;
+}
+
+/* ===== TABLE ===== */
+QTableWidget {
+    background-color: white;
+    alternate-background-color: #f7f7f7;
+    gridline-color: #d9d9d9;
+    font-size: 12px;
+    border: 1px solid #cfcfcf;
+}
+
+/* ===== TABLE HEADER ===== */
+QHeaderView::section {
+    background-color: #e6e6e6;
+    padding: 5px;
+    border: 1px solid #cfcfcf;
+    font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+QPushButton {
+    background-color: #4da3ff;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #3391ff;
+}
+
+QPushButton:pressed {
+    background-color: #2a7de1;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="Date_label">
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="Date"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="Category_label">
+          <property name="text">
+           <string>Category</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="Category">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Travel</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Food</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Utensil</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Clothing</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sports</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Toilet</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Stationary</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="Amount_label">
+          <property name="text">
+           <string>Amount</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="Amount">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Add_Expense">
+        <property name="text">
+         <string>Add Expense</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <column>
+       <property name="text">
+        <string>Sl.No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Category</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Amount</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="Total_label">
+          <property name="text">
+           <string>Total Expense</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="Total"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1091</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNew">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionUndo_Delete"/>
+   </widget>
+   <addaction name="menuNew"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save File</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionUndo_Delete">
+   <property name="text">
+    <string>Undo Delete</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
